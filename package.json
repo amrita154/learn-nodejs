@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/amrita154/learn-nodejs#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "nodemon": "^2.0.15",
     "request": "^2.88.2",
     "yargs": "^17.2.1"

@@ -42,8 +42,8 @@
 
 // yargs.parse();
 
-const http = require('http');
-const fs = require('fs');
+// const http = require('http');
+// const fs = require('fs');
 
 // var server = http.createServer((req, res) => {
 //   res.writeHead(200, { 'Content-type': 'text/plain' });
@@ -55,13 +55,23 @@ const fs = require('fs');
 
 //serving html pages
 
- var server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-type': 'text/html' });
-   const readStream = fs.createReadStream(__dirname + '/index.html');
-   readStream.pipe(res);
-})
+//  var server = http.createServer((req, res) => {
+//   res.writeHead(200, { 'Content-type': 'text/html' });
+//    const readStream = fs.createReadStream(__dirname + '/index.html');
+//    readStream.pipe(res);
+// })
 
-server.listen(3000, '127.0.0.1');
-console.log("server is listening now");
+// server.listen(3000, '127.0.0.1');
+// console.log("server is listening now");
 
 
+//Express
+// const express = require('express');
+
+// var app = express();
+
+// app.get('/profile/:id', (req, res) => {
+//   res.send("this web oage is for" + req.params.id);
+// })
+
+// app.listen(3000);
