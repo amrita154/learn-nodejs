@@ -1,13 +1,9 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
 app.listen(3000);
 
-app.get("/weather/current", (req, res) => {
-    if (!req.query.location) {
-        res.send({ error: "please send location to get the current weather" });
-    }
-    else {
-        
-    }
-})
+app.get('/run', (req, res) => {
+  res.sendFile(path.join(__dirname, '/video.html'));
+});
