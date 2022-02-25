@@ -3,7 +3,11 @@ const path = require('path');
 
 const app = express();
 app.listen(3000);
+app.engine('html', require('ejs').renderFile);
 
-app.get('/run', (req, res) => {
-  res.sendFile(path.join(__dirname, '/video.html'));
+app.get('/run/:channelName', (req, res) => {
+  console.log(__dirname + '/video.html');
+  res.render(__dirname + '/video.html', {
+    name: req.params.channelName,
+  });
 });
